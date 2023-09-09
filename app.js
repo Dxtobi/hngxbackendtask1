@@ -6,8 +6,8 @@ const port = process.env.PORT || 3000;
 
 app.get('/api', (req, res) => {
   // Get query parameters
-  const slackName = req.query.slack_name || 'example_name';
-  const track = req.query.track || 'backend';
+  const slackName = req.query.slack_name || 'You did not provide a name';
+  const track = req.query.track || 'You did not provide a track';
 
   // Get current day of the week
   const currentDay = moment().format('dddd');
