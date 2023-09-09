@@ -12,11 +12,9 @@ app.get('/api', (req, res) => {
   // Get current day of the week
   const currentDay = moment().format('dddd');
 
-  // Get current UTC time with validation of +/-2 minutes
-  const currentUtcTime = moment().utcOffset(0);
+  
   const now = moment();
-  const isWithin2Minutes = now.isBetween(currentUtcTime.clone().subtract(2, 'minutes'), currentUtcTime.clone().add(2, 'minutes'));
-  const utcTime = isWithin2Minutes ? currentUtcTime : now.format('YYYY-MM-DDTHH:mm:ss') + 'Z';
+  const utcTime =  now.format('YYYY-MM-DDTHH:mm:ss[Z]');
 
   // GitHub repository and file URLs
   const githubRepoUrl = 'https://github.com/Dxtobi/hngxbackendtask1';
