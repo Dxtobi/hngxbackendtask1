@@ -19,8 +19,8 @@ app.get('/api', (req, res) => {
   const utcTime = isWithin2Minutes ? currentUtcTime : now.format('YYYY-MM-DDTHH:mm:ss') + 'Z';
 
   // GitHub repository and file URLs
-  const githubRepoUrl = 'https://github.com/username/repo';
-  const githubFileUrl = `${githubRepoUrl}/blob/main/file_name.ext`;
+  const githubRepoUrl = 'https://github.com/Dxtobi/hngxbackendtask1';
+  const githubFileUrl = `${githubRepoUrl}/blob/main/app.js`;
 
   // Create the JSON response
   const response = {
@@ -38,5 +38,5 @@ app.get('/api', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port ${port} 🔥`);
 });
